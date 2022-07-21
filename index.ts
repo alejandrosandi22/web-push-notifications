@@ -4,7 +4,7 @@ import router from "./routes/index.routes.ts";
 
 const app: Application = new Application();
 
-const PORT = Deno.env.get("PORT") || 4001;
+const PORT = 4001;
 
 app.use(oakCors());
 app.use(router.routes());
