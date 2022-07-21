@@ -4,11 +4,11 @@ import router from "./routes/index.routes.ts";
 
 const app: Application = new Application();
 
-const PORT = 4001;
-
 app.use(oakCors());
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-console.log(`Server running on port ${PORT}`);
-await app.listen({ port: PORT as number });
+app.addEventListener("listen", (_e: any) =>
+  console.log("Listening on http://localhost:4001")
+);
+await app.listen({ port: 4001 });
