@@ -10,7 +10,7 @@ type NotifData = {
 const router = new Router();
 
 router.get("/", ({ response }) => {
-  response.body = "Visit alejandrosandi.com";
+  response.body = "Hello World!";
 });
 
 router.post("/", async ({ request, response }) => {
